@@ -15,7 +15,7 @@ import display
                   #                                                                                        *
                   # name:    display.getInitialForkliftCoordinates()                                               *
                   # args:    none                                                                          *
-                  # returns: return coordinates by row and column in the form [<row>,<column>]             *
+                  # returns: return initial forklift coordinates by row and column in the form [<row>,<column>]             *
                   #                                                                                        *
                   # ****************************************************************************************
                   #                                                                                        *
@@ -40,7 +40,7 @@ import display
 
 #EXAMPLES:
 
-#print(stringParser.queryWarehouse(1,0))
+#print(stringParser.queryWarehouse(0,2))
 #print(stringParser.queryWarehouse(2,1))
 #print(stringParser.queryWarehouse(3,2))
 #print(stringParser.getListOfBoxes())

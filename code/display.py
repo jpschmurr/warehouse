@@ -325,8 +325,8 @@ def main(commandList):
     # effect:
     def getCoordFromFloorPlan():
 
-        matrix = stringParser.getMatrix()
-        for row in matrix:
+        #matrix = stringParser.getMatrix()
+        for row in config.warehouse:
             for cell in row:
                 if cell[1]=='f':
                     return cell[0]
@@ -567,9 +567,11 @@ def main(commandList):
         print("diagonal move cost   = " + str(config.diagonalMoveCost))
         print("wall collision cost  = " + str(config.hitCost))
         print("total cost           = " + str(config.hitCost+config.orthogonalMoveCost+config.diagonalMoveCost))
-
+    def displayNumberOfQueriedCells():
+        print("Number of queried cells =" + str(len(config.queriedCells)))
     accumulateCosts()
     displayCosts()
+    displayNumberOfQueriedCells()
     pygame.quit()
 
 

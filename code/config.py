@@ -12,4 +12,6 @@ FLy=0
 initialForkliftX=0
 initialForkliftY=0
 showPath = False
+forkliftInWarehouse = False
+warehouse = []
 
