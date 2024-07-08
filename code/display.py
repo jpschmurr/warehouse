@@ -96,10 +96,10 @@ def main(commandList):
             self.rect.x = x
             self.rect.y = y
 
-        # name:
-        # args:
-        # returns:
-        # effect:
+        # name:display_query_symbol()
+        # args: none
+        # returns: nothing
+        # effect: displays an asterisk in every wall cell that has been queried
        # listOfCommands = config.commandList
         def display_query_symbol(self):
             font = pygame.font.SysFont(None, 60)
@@ -120,7 +120,6 @@ def main(commandList):
                    initialForkliftCoordinates,
                    forkliftHasBox
                    ):
-            # Move the sprite
             pass
 
 
@@ -141,20 +140,22 @@ def main(commandList):
         #listOfCommands = config.commandList
         commandIndex = 0
 
-        # name:
-        # args:
-        # returns:
-        # effect:
+        # name: draw_number
+        # args:  none
+        # returns: nothing
+        # effect: draws the id number of each box in the box cell
+
+
         def draw_number(self):
             font = pygame.font.SysFont(None, 30)
             text_surface = font.render(str(self.ID), True, GREEN)
             text_rect = text_surface.get_rect(center=self.rect.center)
             screen.blit(text_surface, text_rect)
 
-        # name:
-        # args:
-        # returns:
-        # effect:
+        # name:display_query_symbol()
+        # args: none
+        # returns: nothing
+        # effect: displays an asterisk in every box cell that has been queried
         def display_query_symbol(self):
             font = pygame.font.SysFont(None, 60)
             text_surface = font.render(' *', True, BLUE)
@@ -175,10 +176,10 @@ def main(commandList):
                    forkliftHasBox
                    ):
 
-            # name:
-            # args:
-            # returns:
-            # effect:
+            # name:ForkliftIsAdjacentToSelf
+            # args: screen coordinates of the forklift
+            # returns: true if the forllift is adjacent to a box, false otherwise
+            # effect: none
             def ForkliftIsAdjacentToSelf(self,forkliftXCord,forkLiftYCord):
                 scale = config.scale
                 return (
@@ -193,23 +194,22 @@ def main(commandList):
                         (forkliftXCord == self.rect.x + scale and forkLiftYCord == self.rect.y + scale) #NW
                         )
 
-            # name:
-            # args:
-            # returns:
+            # name: IDmatch
+            # args: ID number of a lift command
+            # returns: true if command ID number matches the box ID number, false otherwise
             # effect:
             def IDmatch(self,liftCommandID):
                return self.ID==liftCommandID
 
-            # name:
-            # args:
-            # returns:
-            # effect:
+            # name: forkLiftLiftsThisBox
+            # args: box ID in a lift command, coordinates of the forklift
+            # returns:True if the lift command ID number matches the
+            #          ID number of the box and if the forklift is adjacent to the box
+            #          False otherwise
+            # effect: none
             def forkliftLiftsThisBox(self,liftCommandID,xCord,yCord):
                 return ForkliftIsAdjacentToSelf(self,forkliftX,forkliftY) and IDmatch(self,liftCommandID)
-
-
-
-
+            # if the forklift lifts a box, the box sprite removes itself from the sprite group
             if not forklift.hasBox:
                 if forkliftLiftsThisBox(self,boxID,forkliftX,forkliftY):
                     forklift.hasBox = True
@@ -266,10 +266,7 @@ def main(commandList):
                     return "images/emptyForkliftS.png"
 
 
-       # name:
-       # args:
-       # returns:
-       # effect:
+
         def update(self,
                    nextForkliftXIncrement,
                    nextForkliftYIncrement,
