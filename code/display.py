@@ -220,7 +220,7 @@ def main(commandList):
        # def __init__(self, height, width):
         def __init__(self,xcoord,ycoord):
             super().__init__()
-            self.image = pygame.image.load("images/emptyForkliftE.png")
+            self.image = pygame.image.load("code/images/emptyForkliftE.png")
             self.image = pygame.transform.scale(self.image, (config.scale, config.scale))
             self.rect = self.image.get_rect()
             self.rect.x = xcoord
@@ -230,40 +230,40 @@ def main(commandList):
         def selectLoadedImage(self):
             match config.commandDirection:
                 case 'N':
-                    return "images/loadedForkliftN.png"
+                    return "code/images/loadedForkliftN.png"
                 case 'E':
-                    return "images/loadedForkliftE.png"
+                    return "code/images/loadedForkliftE.png"
                 case 'W':
-                    return "images/loadedForkliftW.png"
+                    return "code/images/loadedForkliftW.png"
                 case 'S':
-                    return "images/loadedForkliftS.png"
+                    return "code/images/loadedForkliftS.png"
                 case 'NW':
-                    return "images/loadedForkliftN.png"
+                    return "code/images/loadedForkliftN.png"
                 case 'NE':
-                    return "images/loadedForkliftN.png"
+                    return "code/images/loadedForkliftN.png"
                 case 'SW':
-                    return "images/loadedForkliftS.png"
+                    return "code/images/loadedForkliftS.png"
                 case 'SE':
-                    return "images/loadedForkliftS.png"
+                    return "code/images/loadedForkliftS.png"
 
         def selectEmptyImage(self):
             match config.commandDirection:
                 case 'N':
-                    return "images/emptyForkliftN.png"
+                    return "code/images/emptyForkliftN.png"
                 case 'E':
-                    return "images/emptyForkliftE.png"
+                    return "code/images/emptyForkliftE.png"
                 case 'W':
-                    return "images/emptyForkliftW.png"
+                    return "code/images/emptyForkliftW.png"
                 case 'S':
-                    return "images/emptyForkliftS.png"
+                    return "code/images/emptyForkliftS.png"
                 case 'NW':
-                    return "images/emptyForkliftN.png"
+                    return "code/images/emptyForkliftN.png"
                 case 'NE':
-                    return "images/emptyForkliftN.png"
+                    return "code/images/emptyForkliftN.png"
                 case 'SW':
-                    return "images/emptyForkliftS.png"
+                    return "code/images/emptyForkliftS.png"
                 case 'SE':
-                    return "images/emptyForkliftS.png"
+                    return "code/images/emptyForkliftS.png"
 
 
        # name:
