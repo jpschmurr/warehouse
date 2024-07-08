@@ -71,6 +71,8 @@ def addDetailsToMatrix(listOfSingleCharacters,emptyMatrix):
             ((emptyMatrix[row])[col])[1]=listOfSingleCharacters[row][col]
             ((emptyMatrix[row])[col])[2]=False
     finalMatrix=emptyMatrix
+    if not config.forkliftInWarehouse:
+        raise Exception("You must add a forklift to the warehouse.")
     return finalMatrix
 
 emptyMatrix = createEmptyMatrix(w)
