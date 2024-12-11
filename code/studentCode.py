@@ -44,7 +44,7 @@ import display
 #print(stringParser.queryWarehouse(2,1))
 #print(stringParser.queryWarehouse(3,2))
 #print(stringParser.getListOfBoxes())
-#print(stringParser.getMatrix())
+print(stringParser.getMatrix())
 #print(stringParser.getInitialForkliftCoordinates())
 
 

@@ -66,10 +66,7 @@ def main(commandList):
             text_rect = text_surface.get_rect(center=self.rect.center)
             screen.blit(text_surface, text_rect)
 
-            # name: update
-            # args:  see parameter list
-            # returns: none
-            # effect:  fills empty cell with color if visited by forklift
+
         def update(self,
                    nextForkliftXIncrement,
                    nextForkliftYIncrement,
@@ -184,7 +181,7 @@ def main(commandList):
 
             # name:ForkliftIsAdjacentToSelf
             # args: screen coordinates of the forklift
-            # returns: true if the forllift is adjacent to a box, false otherwise
+            # returns: true if the forklift is adjacent to a box, false otherwise
             # effect: none
             def ForkliftIsAdjacentToSelf(self,forkliftXCord,forkLiftYCord):
                 scale = config.scale

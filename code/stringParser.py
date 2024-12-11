@@ -46,14 +46,9 @@ def assignCoordinates(row,column):
     return[hCoord,vCoord]
 # set boolean forkliftAdded to True for first forklift
 # raise Exception if second forklift is found in template
-def disallowMoreThanOneForklift(type):
-    if config.forkliftInWarehouse:
-        if type == 'f':
-            raise Exception ("Only one forklift is allowed in the warehouse.")
-    else:
-        if type == 'f':
+def checkForForklift(type):
+    if not config.forkliftInWarehouse and type == 'f':
             config.forkliftInWarehouse = True
-
 
 # input: list of single characters, empty matrix
 # output: matrix with all fields complete
@@ -67,7 +62,7 @@ def addDetailsToMatrix(listOfSingleCharacters,emptyMatrix):
     for row in range(numRowsinEmptyMatrix):
         for col in range(numColumnsinEmptyMatrix):
             ((emptyMatrix[row])[col])[0]=assignCoordinates(row,col)
-            disallowMoreThanOneForklift(listOfSingleCharacters[row][col])
+            checkForForklift(listOfSingleCharacters[row][col])
             ((emptyMatrix[row])[col])[1]=listOfSingleCharacters[row][col]
             ((emptyMatrix[row])[col])[2]=False
     finalMatrix=emptyMatrix
