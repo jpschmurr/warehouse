@@ -5,7 +5,7 @@ import config
 
 config.scale = 40 #determines the side length of a cell in pixels
 config.fps = 2    #determines the animation speed in frames per second
-config.showPath = False  # set to True to shade the cells which have been visited by the forklift
+config.showPath = False# set to True to shade the cells which have been visited by the forklift
 
 import stringParser
 import display
@@ -124,6 +124,10 @@ config.commandList = [
 ['move','W'],
 ['drop','W'],
 ]
+
+
+
+
 
 
 # DO NOT CHANGE THE CODE BELOW THIS LINE

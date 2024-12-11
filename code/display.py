@@ -41,7 +41,13 @@ def main(commandList):
 
 
         #flag for changing color of visited cells
+        # name: isDropOffZone
+        # args:  coordinates of forklift
+        # returns:  True if forklift coordinates equal drop off zone coordinates , False otherwise
+        # effect:
 
+        def isDropOffZone(self,fx,fy):
+            return (fx==config.initialForkliftX and fy==config.initialForkliftY)
 
         # name:
         # args:  coordinates of forklift and coordinates of an empty cell
@@ -79,9 +85,9 @@ def main(commandList):
                 self.image.fill(color)
             else:
                 pass
-            if self.isDropOffZone:
+           if self.isDropOffZone(forkliftX,forkliftY):
                 self.image.fill((0,255,0))
-            else:
+           else:
                 pass
 
 
